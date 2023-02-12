@@ -7,7 +7,9 @@ export let store = {
     weatherStatus: "",
     pressure: 0,
     windDir: "",
-    windSpeed: 0 
+    windSpeed: 0,
+    icon: "",
+    precip: 0
 }  
 
 export async function fetchData(city) {
@@ -18,8 +20,8 @@ export async function fetchData(city) {
 
     const {
     current: {
-    temp_c: temp, humidity, feelslike_c: feelsLike, wind_dir: windDir, wind_mph: windSpeed,
-    condition: {text: weatherStatus}},
+    temp_c: temp, humidity, feelslike_c: feelsLike, wind_dir: windDir, wind_mph: windSpeed, precip__mm: precip,
+    condition: {text: weatherStatus, icon}},
     location: {
     name: cityLocation,
     country: countryLocation}} = result
@@ -35,5 +37,7 @@ export async function fetchData(city) {
     weatherStatus,
     cityLocation,
     countryLocation,
+    icon,
+    precip
     }
 }
