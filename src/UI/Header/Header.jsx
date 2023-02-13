@@ -29,12 +29,6 @@ export default function Header() {
             </div>
             <div className={s.title}>My Weather</div>
         </div>
-        <div className={s.wrapper}>
-            <div className={s.change_theme}>
-                <GlobalSvgSelector id='change-theme'/>
-            </div>
-            <Select defaultValue={options[0]} options={options} className={s.select} styles={colourStyles}/>
-        </div>
     </header>
   )
 }

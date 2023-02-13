@@ -40,4 +40,7 @@ export async function fetchData(city) {
     icon,
     precip
     }
+
 }
+
+fetchData("Москва")

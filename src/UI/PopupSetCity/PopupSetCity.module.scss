@@ -1,0 +1,51 @@
+.blur {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 200;
+    background: rgba($color: #e9e3e3, $alpha: 0.5)
+}
+
+.popup {
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 201;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 250px);
+    box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    justify-content: space-between;
+}
+
+.button {
+    display: flex;
+    background-color: #4793FF;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.input {
+    -webkit-box-shadow: 2px 1px 8px 4px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 2px 1px 8px 4px rgba(34, 60, 80, 0.2);
+    box-shadow: 2px 1px 8px 4px rgba(34, 60, 80, 0.2);
+    text-align: center;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 24px;
+}
