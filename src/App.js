@@ -4,19 +4,18 @@ import Header from "./UI/Header/Header.jsx";
 import { fetchData, store} from "./data/Fetch.js";
 import PopupSetCity from "./UI/PopupSetCity/PopupSetCity.jsx";
 import { useState } from "react";
-import TrackedCitites from "./pages/Home/components/TrakedCities/TrackedCitites.jsx";
-
 
 
 function App() {
   const [cityWeather, setCityWeather] = useState(store);
   const [PopupIsOpen, showPopup] = useState (true)
 
-  const setWeather = async(id) => {
-    await fetchData(id)
+
+  const setWeather = async(city) => {
+    await fetchData(city)
     setCityWeather(store)
     showPopup(false)
-  }
+}
 
   if(PopupIsOpen)
     return (
@@ -29,7 +28,7 @@ function App() {
       <div className="container">
       <Header/>
       <Routes>
-        <Route path="/" element ={<Home cityWeather={cityWeather}/>}/>
+        <Route path="/" element ={<Home cityWeather={cityWeather} />}/>
       </Routes>
     </div>
   );  

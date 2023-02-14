@@ -1,7 +1,8 @@
 import React from 'react'
-import s from './TrackedCitites.module.scss'
+import TrackedCity from '../TrackedCity/TrackedCity'
+import s from './TrackedCityList.module.scss'
 
-export default function TrackedCitites() {
+export default function TrackedCityList({list}) {
   return (
     <div className={s.wrapper}>
         <h1 className={s.title}>Отслеживаемые города</h1>
