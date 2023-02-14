@@ -20,7 +20,7 @@ export async function fetchData(city) {
 
     const {
     current: {
-    temp_c: temp, humidity, feelslike_c: feelsLike, wind_dir: windDir, wind_mph: windSpeed, precip_mm: precipication,
+    temp_c: temp, humidity, feelslike_c: feelsLike, wind_dir: windDir, wind_mph: windSpeed, precip_mm: precipication, pressure_mb:pressure,
     condition: {text: weatherStatus, icon}},
     location: {
     name: cityLocation,
@@ -38,7 +38,8 @@ export async function fetchData(city) {
     cityLocation,
     countryLocation,
     icon,
-    precipication
+    precipication,
+    pressure
     }
 
 }

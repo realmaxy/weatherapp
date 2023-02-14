@@ -4,7 +4,8 @@ import WindDirection from '../WindDirection/WIndDirection'
 import s from './ThisDayInfo.module.scss'
 
 export default function ThisDayInfo({temp, feelsLike, pressure, precipication, windSpeed, windDir}) {
-    windSpeed = windSpeed +' м/c '
+    windSpeed = windSpeed +' м/c ';
+    pressure = (pressure / 1000 * 750.06375).toFixed(1)
   return (
     <div className={s.this_day_info}>
         <div className={s.info_item}>
