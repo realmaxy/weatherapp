@@ -42,5 +42,3 @@ export async function fetchData(city) {
     }
 
 }
-
-fetchData("Москва")
