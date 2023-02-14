@@ -1,11 +1,13 @@
-import { useRef, useState } from 'react'
+import { useRef} from 'react'
 import s from './PopupSetCity.module.scss'
 
 
  const PopupSetCity = ({onSubmit = f => f}) => {
+
   const submit = e => {
     e.preventDefault()
   }
+
   const inputRef = useRef()
   return (
     <>
