@@ -1,15 +1,18 @@
+@import '../../../../styles/variables.scss';
+
 .this_day {
-    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    box-shadow: $box-shadow;
     border-radius: 20px;
     max-width: 300px;
     padding: 20px;
+    background-color: #fff;
 }
 
 .temp {
     font-size: 96px;
     line-height: 117.02px;
     font-weight: 500;
-    color: #4793FF;
+    color: $blue;
     max-width: fit-content;
     margin: 0 auto;
 }

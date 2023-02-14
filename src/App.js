@@ -4,6 +4,7 @@ import Header from "./UI/Header/Header.jsx";
 import { fetchData, store} from "./data/Fetch.js";
 import PopupSetCity from "./UI/PopupSetCity/PopupSetCity.jsx";
 import { useState } from "react";
+import TrackedCitites from "./pages/Home/components/TrakedCities/TrackedCitites.jsx";
 
 
 
@@ -21,12 +22,6 @@ function App() {
     return (
       <>
         <PopupSetCity onSubmit={setWeather} />
-      <div className="container">
-        <Header/>
-        <Routes>
-          <Route path="/" element ={<Home cityWeather={cityWeather}/>}/>
-        </Routes>
-      </div>
       </>
     );
   else 

@@ -11,7 +11,6 @@ import s from './PopupSetCity.module.scss'
   const inputRef = useRef()
   return (
     <>
-    <div className={s.blur}/>
     <div className={s.popup}>
         <form className={s.form} onSubmit={submit}>
             <h1 className={s.title}>Введите свой город</h1>
