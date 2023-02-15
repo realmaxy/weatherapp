@@ -6,12 +6,13 @@ import s from './Home.module.scss'
 
 
 export default function Home({cityWeather, trackedCities}) {
+  
   return (
     <div className={s.home}>
       <div className={s.wrapper}>
         <ThisDay {...cityWeather}/>
         <ThisDayInfo {...cityWeather}/>
-        <TrackedCityList list={trackedCities}/>
+        <TrackedCityList list = {trackedCities}/>
       </div>
     </div>
   )

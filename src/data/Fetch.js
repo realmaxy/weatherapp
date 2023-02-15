@@ -1,14 +1,14 @@
 export let store = {
-    cityLocation: "",
+    cityLocation: "Краснодар",
     countryLocation: "",
-    temp: 0,
-    feelsLike: 0,
-    humidity: 0,
-    weatherStatus: "",
-    pressure: 0,
-    windDir: "",
-    windSpeed: 0,
-    icon: "",
+    temp: 20,
+    feelsLike: 25,
+    humidity: 70,
+    weatherStatus: "Sunny",
+    pressure: 1000,
+    windDir: "NNW",
+    windSpeed: 3,
+    icon: "https://cdn.weatherapi.com/weather/64x64/night/116.png",
     precipication: 0
 }  
 

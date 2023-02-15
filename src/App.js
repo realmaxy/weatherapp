@@ -8,30 +8,31 @@ import { useState } from "react";
 
 function App() {
   const [cityWeather, setCityWeather] = useState(store);
-  const [PopupIsOpen, showPopup] = useState (true)
+  const [isOpen, showPopup] = useState (true)
+  const [trackedCities, setTrackedCities] = useState([])
 
 
   const setWeather = async(city) => {
     await fetchData(city)
     setCityWeather(store)
     showPopup(false)
-}
 
-  if(PopupIsOpen)
+    const newItem = {
+      cityName: store.cityLocation,
+      cityWeather: store
+    }
+
+    setTrackedCities(prevCities => [...prevCities, newItem])
+  }
+
     return (
       <>
-        <PopupSetCity onSubmit={setWeather} />
+        <PopupSetCity onSubmit={setWeather} isOpen={isOpen} needBlur={true}/>
+        <div className="container">
+        <Home cityWeather={cityWeather} trackedCities={trackedCities}/>
+      </div>
       </>
-    );
-  else 
-    return (
-      <div className="container">
-      <Header/>
-      <Routes>
-        <Route path="/" element ={<Home cityWeather={cityWeather} />}/>
-      </Routes>
-    </div>
-  );  
+    )
 }
 
 export default App;

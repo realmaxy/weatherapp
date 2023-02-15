@@ -2,6 +2,9 @@
 
 .wrapper {
     width: 285px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     box-shadow: $box-shadow;
     border-radius: $border-radius;
@@ -13,4 +16,8 @@
     font-size: 18px;
     color: #939CB0;
     margin: 0px 0px 10px 0px;
+}
+
+.list__wrapper {
+    min-height: 70%;
 }
