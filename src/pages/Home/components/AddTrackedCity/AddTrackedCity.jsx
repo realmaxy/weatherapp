@@ -8,10 +8,12 @@ export default function AddTrackedCity({addCity = f => f, showPopUp = f => f, is
   return (
     <div className={s.wrapper}>
         <PopupSetCity isOpen={isOpen} needBlur ={false} onSubmit ={addCity}/>
-        <h1 className={s.title}>Добавить город</h1>
-        <button onClick={showPopUp}>
-            <GlobalSvgSelector id='add-button' />
-        </button>   
+        <button  onClick={showPopUp} className= {s.add_button}>
+            <h1 className={s.title}>Добавить город</h1>
+            <div>
+                <GlobalSvgSelector id='add-button' />
+            </div>  
+        </button> 
     </div>
   )
 }

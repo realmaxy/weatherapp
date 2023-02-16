@@ -4,7 +4,8 @@ import AddTrackedCity from '../AddTrackedCity/AddTrackedCity'
 import TrackedCity from '../TrackedCity/TrackedCity'
 import s from './TrackedCityList.module.scss'
 
-export default function TrackedCityList(props) {
+export default function TrackedCityList({cityName, cityWeather, onSetWeather = f => f}) {
+
 
   const [cityList, setCityList] = useState([])
   const [isOpen, setOpen] = useState(false)
@@ -18,22 +19,28 @@ export default function TrackedCityList(props) {
     setOpen(false)
 
     const cityItem = {
-      cityName: city,
+      id: store.cityLocation,
+      cityName: store.cityLocation,
       cityWeather: store
     }
-
+    
     setCityList(prevList => [...prevList, cityItem])
-    console.log(cityList);
+  }
+
+  const removeCity = (item) => {
+    setCityList(cityList.filter(i => i.id !== item.id))
   }
 
   return (
     <div className={s.wrapper}>
       <h1 className={s.title}>Отслеживаемые города</h1>
       <div className={s.list__wrapper}>
-        <TrackedCity {...props.list[0]} isMain={true}/>
-        {cityList.map((item, n) => <TrackedCity key={n} cityName={item.cityName} cityWeather={item.cityWeather} />)}
+        <TrackedCity cityName={cityName} cityWeather={cityWeather} isMain={true} setWeather={onSetWeather}/>
+        {cityList.map((item) => 
+        <TrackedCity key={item.id} {...item} removeCity = {removeCity} setWeather={onSetWeather}/>
+        )}
       </div>
-      <AddTrackedCity addCity={addCity} showPopUp={showPopUp} isOpen = {isOpen}/>
+      <AddTrackedCity addCity={addCity} showPopUp={showPopUp} isOpen = {isOpen} />
     </div>
   )
 }

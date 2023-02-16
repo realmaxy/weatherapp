@@ -1,0 +1,38 @@
+.this_day_info {
+  width: 600px;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 42px 30px;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 20px 0px 0px;
+}
+
+.info_item {
+  display: flex;
+  align-items: center;
+}
+
+.text {
+  color: #939CB0;
+  width: 100px;
+  font-size: 14px;
+  margin: 0px 20px 0px 0px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}/*# sourceMappingURL=ThisDayInfo.module.css.map */

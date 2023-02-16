@@ -6,6 +6,7 @@ import s from './PopupSetCity.module.scss'
 
   const submit = e => {
     e.preventDefault()
+    setInputValue('')
   }
 
   const [inputValue, setInputValue] = useState('')

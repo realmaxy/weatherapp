@@ -9,7 +9,7 @@ import { useState } from "react";
 function App() {
   const [cityWeather, setCityWeather] = useState(store);
   const [isOpen, showPopup] = useState (true)
-  const [trackedCities, setTrackedCities] = useState([])
+  const [trackedCities, setTrackedCities] = useState()
 
 
   const setWeather = async(city) => {
@@ -22,15 +22,16 @@ function App() {
       cityWeather: store
     }
 
-    setTrackedCities(prevCities => [...prevCities, newItem])
+    setTrackedCities(newItem)
   }
 
     return (
       <>
         <PopupSetCity onSubmit={setWeather} isOpen={isOpen} needBlur={true}/>
         <div className="container">
-        <Home cityWeather={cityWeather} trackedCities={trackedCities}/>
-      </div>
+          <Header />
+          <Home cityWeather={cityWeather} trackedCities={trackedCities}/>
+        </div>
       </>
     )
 }

@@ -1,0 +1,37 @@
+.this_day {
+  box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+  border-radius: 20px;
+  max-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.temp {
+  font-size: 96px;
+  line-height: 117.02px;
+  font-weight: 500;
+  color: #4793FF;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 48.76px;
+  color: #000;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.time, .location {
+  font-size: 20px;
+}
+
+.location {
+  margin: 10px 0px 0px 0px;
+}/*# sourceMappingURL=ThisDay.module.css.map */

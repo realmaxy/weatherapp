@@ -6,4 +6,10 @@
 
 .city_name {
     font-size: 22px;
+    display: flex;
+    justify-content: start;
+}
+
+.set {
+    min-width: 90%;
 }
